@@ -75,6 +75,12 @@ return packer.startup(function(use)
         require('crates').setup()
     end,
 } --for crates autocomplete in rust 
+  use {
+  'David-Kunz/cmp-npm',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  }
+}-- for npm packages and versions autocomplete 
 
   -- snippets
   use { "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" } --snippet engine

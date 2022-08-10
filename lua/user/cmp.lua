@@ -103,6 +103,7 @@ cmp.setup({
 				path = "[Path]",
 				emoji = "[Emoji]",
         crates = "[Rust Crates]",
+        npm = "[npm]"
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -114,6 +115,7 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path" },
     { name = "crates"},
+    { name = 'npm', keyword_length = 4 },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
@@ -128,3 +130,4 @@ cmp.setup({
 		ghost_text = true,
 	},
 })
+
