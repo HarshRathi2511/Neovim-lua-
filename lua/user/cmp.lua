@@ -108,7 +108,7 @@ cmp.setup({
 			return vim_item
 		end,
 	},
-	sources = {
+	sources = {  --according to hierarchy (weighted order of prefs)
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
