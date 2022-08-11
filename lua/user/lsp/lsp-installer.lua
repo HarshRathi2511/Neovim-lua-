@@ -26,7 +26,7 @@ local servers = {
   -- "lemminx"
   "ccls",
   "dockerls",
-  "dartls",
+  -- "dartls",
 }
 
 lsp_installer.setup()
