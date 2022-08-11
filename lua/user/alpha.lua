@@ -20,9 +20,10 @@ dashboard.section.buttons.val = {
   dashboard.button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
   dashboard.button("c", " " .. " Config", ":e ~/.config/nvim/init.lua <CR>"),
   dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+  dashboard.button("b", "sh" .. " bashrc",":e ~/.bashrc <CR>"),
 }
 local function footer()
-  return "chrisatmachine.com"
+  return "harshrathi2511"
 end
 
 dashboard.section.footer.val = footer()
