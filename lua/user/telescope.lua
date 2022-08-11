@@ -5,6 +5,9 @@ end
 
 local actions = require "telescope.actions"
 
+--load the flutter extension 
+telescope.load_extension "flutter"
+
 telescope.setup {
   defaults = {
     prompt_prefix = " ",
