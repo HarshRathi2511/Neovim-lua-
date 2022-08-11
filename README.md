@@ -1,17 +1,17 @@
 # A Lua IDE config for Neovim
 
 
-> What makes it "rock solid"?
+![Screenshot from 2022-08-11 16-13-17](https://user-images.githubusercontent.com/75066364/184116786-b7da6545-aeda-42b5-8315-a27185723a21.png)
 
-All of the included plugins are pinned to a version that ensures they are compatible and will not update potentially introducing errors into your config. For every Neovim release I will update this repo along with the community to keep it up to date with the newest versions.
-
-As I mentioned, this config is meant as a starting point for people new to Neovim who want a familiar IDE experience. The config has a very simple structure that makes it easy to add new plugins. 
+![Screenshot from 2022-08-11 16-15-15](https://user-images.githubusercontent.com/75066364/184117025-bd57ef08-9372-4dcd-8046-17b513f41a06.png)
 
 ## Install Neovim 0.7
 
 You can install Neovim with your package manager e.g. brew, apt, pacman etc.. but remember that when you update your packages Neovim may be upgraded to a newer version.
 
 If you would like to make sure Neovim only updates when you want it to than I recommend installing from source:
+
+
 
 ```sh
 git clone https://github.com/neovim/neovim.git
