@@ -8,7 +8,11 @@ bufferline.setup {
     close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
     right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+    separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
+    show_buffer_icons = true,
+    diagnostics = "nvim_lsp", --to show lsp errors 
+    diagnostics_update_in_insert = true, --updates as we write 
+    color_icons= true,  --whether or not to add the filetype icon highlights
   },
   highlights = {
     fill = {
