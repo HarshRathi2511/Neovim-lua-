@@ -40,7 +40,8 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
-
+--Better copy to ctrl c 
+vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
