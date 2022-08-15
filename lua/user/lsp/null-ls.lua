@@ -23,6 +23,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.google_java_format,
 		formatting.prettier,
+		formatting.rustfmt,
 		diagnostics.flake8,
 	},
 	--a hook which autoformats on save
