@@ -4,33 +4,35 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = "all", -- one of "all" or a list of languages
-	ignore_install = { "" }, -- List of parsers to ignore installing
-	highlight = {
-		enable = true, -- false will disable the whole extension
-		disable = { "css" }, -- list of language that will be disabled
+	--ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {
+		"typescript",
+		"python",
+		"bash",
+		"dockerfile",
+		"html",
+		"javascript",
+		"java",
+		"json",
+		"lua",
+		"python",
+		"vim",
+		"c",
+		"cpp",
 	},
+	sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)
+	ignore_install = { "haskell" }, -- List of parsers to ignore installing
 	autopairs = {
 		enable = true,
 	},
-	indent = { enable = true, disable = { "python", "css" } },
-  rainbow = {
-    enable = false,
-    -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-    max_file_lines = nil, -- Do not enable for files with more than n lines, int
-    -- colors = {}, -- table of hex strings
-    -- termcolors = {} -- table of colour name strings
-    colors = {
-      -- "#68a0b0",
-      -- "#946EaD",
-      -- "#c7aA6D",
-      "Gold",
-      "Orchid",
-      -- "DodgerBlue",
-      -- "Cornsilk",
-      -- "Salmon",
-      "LawnGreen",
-    },
-  }
+	highlight = {
+		enable = true, -- false will disable the whole extension
+		disable = { "" }, -- list of language that will be disabled
+		additional_vim_regex_highlighting = true,
+	},
+	indent = { enable = true, disable = { "yaml" } },
+	context_commentstring = {
+		enable = false,
+		enable_autocmd = false,
+	},
 })
