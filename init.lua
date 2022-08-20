@@ -10,13 +10,9 @@ require("user.autopairs")
 require("user.comment")
 require("user.gitsigns")
 require("user.nvim-tree")
-
 -- require("user.bufferline")
 require("user.new-buffer-line")
-
 require("user.lualine")
--- require("user.old-lua-line")
-
 require("user.toggleterm")
 require("user.project")
 require("user.impatient")
