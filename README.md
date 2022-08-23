@@ -1,6 +1,5 @@
 # A Lua IDE config for Neovim
 
-
 ![Screenshot from 2022-08-11 16-13-17](https://user-images.githubusercontent.com/75066364/184116786-b7da6545-aeda-42b5-8315-a27185723a21.png)
 
 ![Screenshot from 2022-08-11 16-15-15](https://user-images.githubusercontent.com/75066364/184117025-bd57ef08-9372-4dcd-8046-17b513f41a06.png)
@@ -11,12 +10,10 @@ You can install Neovim with your package manager e.g. brew, apt, pacman etc.. bu
 
 If you would like to make sure Neovim only updates when you want it to than I recommend installing from source:
 
-
-
 ```sh
 git clone https://github.com/neovim/neovim.git
 cd neovim
-git checkout release-0.7
+git checkout stable
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 ```
@@ -29,9 +26,9 @@ Make sure to remove or move your current `nvim` directory
 git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim
 ```
 
-Run `nvim` and wait for the plugins to be installed 
+Run `nvim` and wait for the plugins to be installed
 
-**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
+**NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim)
 
 **NOTE** Checkout this file for some predefined keymaps: [keymaps](https://github.com/LunarVim/nvim-basic-ide/blob/master/lua/user/keymaps.lua)
 
@@ -72,13 +69,14 @@ Next we need to install python support (node is optional)
   npm i -g neovim
   ```
 
-We will also need `ripgrep` for Telescope to work: 
+We will also need `ripgrep` for Telescope to work:
 
 - Ripgrep
 
   ```sh
   sudo apt install ripgrep
   ```
+
 ---
 
 **NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
@@ -157,6 +155,6 @@ You can install new plugins here: [plugins](https://github.com/LunarVim/nvim-bas
 
 ---
 
-> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
+> The computing scientist's main challenge is not to get confused by the complexities of his own making.
 
 \- Edsger W. Dijkstra

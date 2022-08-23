@@ -63,6 +63,8 @@ return packer.startup(function(use)
 		run = "cd ~/.local/share/nvim/site/pack/packer/opt/vim-hexokinase && make hexokinase",
 		cmd = { "HexokinaseToggle" },
 	}) --mainly for css, flutter previewing the colors
+	use({ "p00f/nvim-ts-rainbow" }) --to get rainbow parenthesis
+	--try using sneak
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
@@ -112,7 +114,6 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 	})
-	use({ "p00f/nvim-ts-rainbow" }) --to get rainbow parenthesis
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
@@ -121,9 +122,6 @@ return packer.startup(function(use)
 	use({ "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" })
 	use({ "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" })
 	use({ "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" })
-
-	--trying out nv chad
-	use("NvChad/ui")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
