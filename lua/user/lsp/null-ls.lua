@@ -20,11 +20,12 @@ null_ls.setup({
 			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
 		}),
 		-- formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.stylua,
+		formatting.stylua, --for lua
 		formatting.google_java_format,
-		formatting.prettier,
-		formatting.rustfmt,
-		diagnostics.flake8,
+		formatting.prettier, --js,ts
+		formatting.rustfmt, --rust
+		diagnostics.flake8, --python files
+		formatting.uncrustify, --formatter for cpp files
 	},
 	--a hook which autoformats on save
 	on_attach = function(client, bufnr)
@@ -35,6 +36,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+					vim.lsp.buf.formatting()
 					vim.lsp.buf.formatting_sync()
 				end,
 			})

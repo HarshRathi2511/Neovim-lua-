@@ -1063,9 +1063,10 @@ let g:thought = [
 
 
 let g:startify_lists = [
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+\ { 'type': 'commands',  'header': ['   Commands']       },
           \ { 'type': 'files',     'header': ['   Files']            },
           \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ ]
 
@@ -1075,45 +1076,53 @@ let g:startify_bookmarks = [
             \ { 'v': '~/Documents/Backend'},
             \ {'d':'~/Documents/DSA/'},
             \ {'s':'~/Documents/Organizations/swoop'},
- \ {'l':'~/Documents/Organizations/lezgo/'},
+            \ {'l':'~/Documents/Organizations/lezgo/'},
             \ ]
+
+  " let g:startify_commands = [
+  "       \ ':help reference',
+  "       \ ['Vim Reference', 'h ref'],
+  "       \ {'h': 'h ref'},
+  "       \ {'m': ['Project Finder', ' lua require('telescope').extensions.projects.projects()<CR>']},
+" \         ]
 
 let g:startify_session_delete_buffers = 1
 let g:startify_change_to_vcs_root = 1
 let g:startify_fortune_use_unicode = 1
 let g:startify_session_persistence = 1
 let g:startify_enable_special = 0
+let g:startify_padding_left = 8
 
-" let g:startify_custom_header = [
-"         \ '   _  __     _         __  ___         __     ___ ',
-"         \ '  / |/ /  __(_)_ _    /  |/  /__ _____/ /    |_  |',
-"         \ ' /    / |/ / /  ` \  / /|_/ / _ `/ __/ _ \  / __/ ',
-"         \ '/_/|_/|___/_/_/_/_/ /_/  /_/\_,_/\__/_//_/ /____/ ',
-"         \]
-
-" let g:startify_custom_header = [
-"   \ '                       .-.',
-"   \ '                      |_:_|',
-"   \ '                     /(_Y_)\',
-"   \ '.                   ( \/M\/ )',
-"   \ ' `.               _.`-/`-`\-`._',
-"   \ '   `:           _/.--`[[[[]`--.\_',
-"   \ '     `:        /_`  : |::"| :  `.\',
-"   \ '       `:     //   ./ |oUU| \.`  :\',
-"   \ '         `:  _:`..` \_|___|_/ :   :|',
-"   \ '           `:.  .`  |_[___]_|  :.`:\',
-"   \ '            [::\ |  :  | |  :   ; : \',
-"   \ '             `-`   \/`.| |.` \  .;.` |',
-"   \ '             |\_    \  `-`   :       |',
-"   \ '             |  \    \ .:    :   |   |',
-"   \ '             |   \    | `.   :    \  |',
-"   \ '             /       \   :. .;       |',
-"   \ '            /     |   |  :__/     :  \\',
-"   \ '           |  |   |    \:   | \   |   ||',
-"   \ '          /    \  : :  |:   /  |__|   /|',
-"   \ '         |     : : :_/_|  /`._\  `--|_\',
-"   \ '          /___.-/_|-`   \  \',
-"   \ '                         `-`',
-"   \]
    
 ]])
+-- " " let g:startify_custom_header = [
+-- " "         \ '   _  __     _         __  ___         __     ___ ',
+-- " "         \ '  / |/ /  __(_)_ _    /  |/  /__ _____/ /    |_  |',
+-- " "         \ ' /    / |/ / /  ` \  / /|_/ / _ `/ __/ _ \  / __/ ',
+-- " "         \ '/_/|_/|___/_/_/_/_/ /_/  /_/\_,_/\__/_//_/ /____/ ',
+-- " "         \]
+-- "
+-- " " let g:startify_custom_header = [
+-- " "   \ '                       .-.',
+-- " "   \ '                      |_:_|',
+-- " "   \ '                     /(_Y_)\',
+-- " "   \ '.                   ( \/M\/ )',
+-- " "   \ ' `.               _.`-/`-`\-`._',
+-- " "   \ '   `:           _/.--`[[[[]`--.\_',
+-- " "   \ '     `:        /_`  : |::"| :  `.\',
+-- " "   \ '       `:     //   ./ |oUU| \.`  :\',
+-- " "   \ '         `:  _:`..` \_|___|_/ :   :|',
+-- " "   \ '           `:.  .`  |_[___]_|  :.`:\',
+-- " "   \ '            [::\ |  :  | |  :   ; : \',
+-- " "   \ '             `-`   \/`.| |.` \  .;.` |',
+-- " "   \ '             |\_    \  `-`   :       |',
+-- " "   \ '             |  \    \ .:    :   |   |',
+-- " "   \ '             |   \    | `.   :    \  |',
+-- " "   \ '             /       \   :. .;       |',
+-- " "   \ '            /     |   |  :__/     :  \\',
+-- " "   \ '           |  |   |    \:   | \   |   ||',
+-- " "   \ '          /    \  : :  |:   /  |__|   /|',
+-- " "   \ '         |     : : :_/_|  /`._\  `--|_\',
+-- " "   \ '          /___.-/_|-`   \  \',
+-- " "   \ '                         `-`',
+-- " "   \]
