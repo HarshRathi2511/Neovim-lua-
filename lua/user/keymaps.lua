@@ -40,8 +40,8 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
---Better copy to ctrl c 
-vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+--Better copy to ctrl c
+vim.api.nvim_set_keymap("v", "<c-c>", '"*y :let @+=@*<CR>', { noremap = true, silent = true })
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -56,6 +56,8 @@ keymap("v", ">", ">gv", opts)
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
+--for formatting on save
+keymap("n", "<S-f>", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
@@ -65,11 +67,11 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
---Htop to view system processes 
-keymap("n", "<leader>dd", "<cmd>lua _HTOP_TOGGLE()<CR>",opts)
+--Htop to view system processes
+keymap("n", "<leader>dd", "<cmd>lua _HTOP_TOGGLE()<CR>", opts)
 
---NCDU to assess storage 
-keymap("n","<leader>nc","<cmd>lua _NCDU_TOGGLE()<CR>",opts)
+--NCDU to assess storage
+keymap("n", "<leader>nc", "<cmd>lua _NCDU_TOGGLE()<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)

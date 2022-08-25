@@ -67,9 +67,9 @@ return packer.startup(function(use)
 	use({
 		"notjedi/nvim-rooter.lua",
 	}) --for making the cwd the root
-	use({
-		"rcarriga/nvim-notify",
-	}) --fancy notifications screen
+	-- use({
+	-- 	"rcarriga/nvim-notify",
+	-- }) --fancy notifications screen
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })

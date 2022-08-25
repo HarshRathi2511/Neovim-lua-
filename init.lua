@@ -23,5 +23,3 @@ require("user.startify")
 require("user.whichkey")
 require("user.hexokinase")
 require("user.rooter")
---see if notify is something that suits me
-require("user.nvim-notify")

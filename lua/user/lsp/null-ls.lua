@@ -25,7 +25,7 @@ null_ls.setup({
 		formatting.prettier, --js,ts
 		formatting.rustfmt, --rust
 		diagnostics.flake8, --python files
-		formatting.uncrustify, --formatter for cpp files
+		-- formatting.uncrustify, --formatter for cpp files
 	},
 	--a hook which autoformats on save
 	on_attach = function(client, bufnr)
