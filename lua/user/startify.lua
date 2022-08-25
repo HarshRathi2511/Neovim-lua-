@@ -1076,7 +1076,8 @@ let g:startify_bookmarks = [
             \ { 'v': '~/Documents/Backend'},
             \ {'d':'~/Documents/DSA/'},
             \ {'s':'~/Documents/Organizations/swoop'},
-            \ {'l':'~/Documents/Organizations/lezgo/'},
+            \ {'l':'~/Documents/Organizations/lezgo'},
+            \ {'r':'~/Documents/Rust'},
             \ ]
 
   " let g:startify_commands = [
