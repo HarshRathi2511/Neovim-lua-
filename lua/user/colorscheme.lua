@@ -28,4 +28,10 @@
 -- vim.g.tokyonight_colors = { error = "#ff0000", border = "purple" }
 
 -- Load the colorscheme
-vim.cmd([[colorscheme onedark]])
+local colorscheme = "onedark"
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
+end

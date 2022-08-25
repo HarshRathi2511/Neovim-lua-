@@ -64,7 +64,12 @@ return packer.startup(function(use)
 		cmd = { "HexokinaseToggle" },
 	}) --mainly for css, flutter previewing the colors
 	use({ "p00f/nvim-ts-rainbow" }) --to get rainbow parenthesis
-	--try using sneak
+	use({
+		"notjedi/nvim-rooter.lua",
+	}) --for making the cwd the root
+	use({
+		"rcarriga/nvim-notify",
+	}) --fancy notifications screen
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })

@@ -56,6 +56,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 			},
 		},
 	},
+	update_cwd = true, --config of nvim rooter
 	renderer = {
 		add_trailing = true, -- add trailing "/" to folders
 		group_empty = true, -- group empty folders in one line node
