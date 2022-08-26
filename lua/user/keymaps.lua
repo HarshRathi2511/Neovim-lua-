@@ -31,6 +31,24 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-w>", "<cmd>Bdelete!<CR>", opts)
+keymap(
+	"n",
+	"<A-b>",
+	"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+	opts
+)
+keymap("n", "<A-H>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<A-L>", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<A-1>", ":BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "<A-2>", ":BufferLineGoToBuffer 2<CR>", opts)
+keymap("n", "<A-3>", ":BufferLineGoToBuffer 3<CR>", opts)
+keymap("n", "<A-4>", ":BufferLineGoToBuffer 4<CR>", opts)
+keymap("n", "<A-5>", ":BufferLineGoToBuffer 5<CR>", opts)
+keymap("n", "<A-6>", ":BufferLineGoToBuffer 6<CR>", opts)
+keymap("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>", opts)
+keymap("n", "<A-8>", ":BufferLineGoToBuffer 8<CR>", opts)
+keymap("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -60,7 +78,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<S-f>", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>lg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 

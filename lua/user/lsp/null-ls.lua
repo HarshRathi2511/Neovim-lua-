@@ -24,7 +24,7 @@ null_ls.setup({
 		formatting.google_java_format,
 		formatting.prettier, --js,ts
 		formatting.rustfmt, --rust
-		diagnostics.flake8, --python files
+		-- diagnostics.flake, --python filesnullnull
 		-- formatting.uncrustify, --formatter for cpp files
 	},
 	--a hook which autoformats on save
