@@ -26,6 +26,7 @@ null_ls.setup({
 		formatting.rustfmt, --rust
 		-- diagnostics.flake, --python filesnullnull
 		-- formatting.uncrustify, --formatter for cpp files
+		diagnostics.eslint.with({}),
 	},
 	--a hook which autoformats on save
 	on_attach = function(client, bufnr)
@@ -35,9 +36,10 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
+          --made it so that shift f triggers autocomplete 
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					vim.lsp.buf.formatting()
-					vim.lsp.buf.formatting_sync()
+					-- vim.lsp.buf.formatting()
+					-- vim.lsp.buf.formatting_sync()
 				end,
 			})
 		end
