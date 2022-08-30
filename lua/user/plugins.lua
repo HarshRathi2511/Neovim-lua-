@@ -136,6 +136,32 @@ return packer.startup(function(use)
 	use({ "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" })
 	use({ "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" })
 
+  --arhamiser plugin for a beautiful ui
+  use({
+  "arsham/arshamiser.nvim",
+  requires = {
+    "arsham/arshlib.nvim",
+    "famiu/feline.nvim",
+    "rebelot/heirline.nvim",
+    "kyazdani42/nvim-web-devicons",
+    "j-hui/fidget.nvim",
+    "nanotee/sqls.nvim",
+  },
+  config = function()
+    require("arshlib.quick").autocmd({ events = "UIEnter", pattern = "*",
+      callback = function()
+        vim.api.nvim_command("colorscheme onedark")
+        -- require("arshamiser.feliniser")
+        -- or:
+        require("arshamiser.heirliniser")
+        _G.custom_foldtext = require("arshamiser.folding").foldtext
+        vim.opt.foldtext = "v:lua.custom_foldtext()"
+        -- if you want to draw a tabline:
+        vim.api.nvim_set_option("tabline", [[%{%v:lua.require("arshamiser.tabline").draw()%}]])
+      end,
+    })
+  end,
+})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
