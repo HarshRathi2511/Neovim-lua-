@@ -8,7 +8,7 @@ local servers = {
 	-- "cssmodules_ls",
 	"emmet_ls",
 	"html",
-	-- "jdtls",
+	"jdtls",
 	"jsonls",
 	-- "solc",
 	-- "solidity_ls",
@@ -58,6 +58,16 @@ for _, server in pairs(servers) do
 		local pyright_opts = require("user.lsp.settings.rust")
 		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 	end
+
+	if server == "jdtls" then
+		local jdtls_opts = require("user.lsp.settings.jdtls")
+		opts = vim.tbl_deep_extend("force", jdtls_opts, opts)
+	end
+
+	-- if server == "jsonls" then
+	-- 	local jsonls_opts = require("user.lsp.settings.jsonls")
+	-- 	opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
+	-- end
 
 	lspconfig[server].setup(opts)
 end

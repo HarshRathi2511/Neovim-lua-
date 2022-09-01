@@ -1078,6 +1078,8 @@ let g:startify_bookmarks = [
             \ {'s':'~/Documents/Organizations/swoop'},
             \ {'l':'~/Documents/Organizations/lezgo'},
             \ {'r':'~/Documents/Rust'},
+            \ {'a': '~/Acads/3-1'},
+            \ {'j': '~/Documents/Java'},
             \ ]
 
   " let g:startify_commands = [
@@ -1096,6 +1098,7 @@ let g:startify_padding_left = 8
 
    
 ]])
+
 -- " " let g:startify_custom_header = [
 -- " "         \ '   _  __     _         __  ___         __     ___ ',
 -- " "         \ '  / |/ /  __(_)_ _    /  |/  /__ _____/ /    |_  |',

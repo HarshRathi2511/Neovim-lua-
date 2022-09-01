@@ -118,7 +118,7 @@ return packer.startup(function(use)
 	use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
 	--flutter tools for running using debugging etc
 	use({ "akinsho/flutter-tools.nvim", requires = { "nvim-lua/plenary.nvim" } })
-
+  use 'tamago324/nlsp-settings.nvim' --lsp support for json and yaml files 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
 	-- use { "nvim-telescope/telescope-media-files.nvim" }
