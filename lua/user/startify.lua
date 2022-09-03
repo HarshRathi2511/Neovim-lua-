@@ -1079,7 +1079,7 @@ let g:startify_bookmarks = [
             \ {'l':'~/Documents/Organizations/lezgo'},
             \ {'r':'~/Documents/Rust'},
             \ {'a': '~/Acads/3-1'},
-            \ {'j': '~/Documents/Java'},
+            \ {'o': '~/Documents/Java'},
             \ ]
 
   " let g:startify_commands = [
