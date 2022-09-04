@@ -5,28 +5,18 @@ end
 
 local servers = {
 	"cssls",
-	-- "cssmodules_ls",
 	"emmet_ls",
 	"html",
 	"jdtls",
 	"jsonls",
-	-- "solc",
-	-- "solidity_ls",
 	"sumneko_lua",
-	-- "tflint",
-	-- "terraformls",
 	"tsserver",
 	"pyright",
-	-- "yamlls",
 	"bashls",
-	-- "clangd",
 	"rust_analyzer",
-	-- "taplo",
-	-- "zk@v0.10.1",
-	-- "lemminx"
 	"ccls",
 	"dockerls",
-	-- "dartls",
+  "yamlls",
 }
 
 lsp_installer.setup()
