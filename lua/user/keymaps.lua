@@ -74,19 +74,24 @@ keymap("v", ">", ">gv", opts)
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
---for formatting on save
+--for formatting on shift f 
 keymap("n", "<S-f>", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
+
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>lg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
+--for code actions for supported files 
+keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
+keymap("n", "<leader>cr", ":lua vim.lsp.buf.range_code_action()<CR>", opts)
+
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 --Htop to view system processes
-keymap("n", "<leader>dd", "<cmd>lua _HTOP_TOGGLE()<CR>", opts)
+keymap("n", "<leader>ht", "<cmd>lua _HTOP_TOGGLE()<CR>", opts)
 
 --NCDU to assess storage
 keymap("n", "<leader>nc", "<cmd>lua _NCDU_TOGGLE()<CR>", opts)
