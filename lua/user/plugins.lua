@@ -147,18 +147,20 @@ return packer.startup(function(use)
     "j-hui/fidget.nvim",
     "nanotee/sqls.nvim",
   },
-  config = function()
-    require("arshlib.quick").autocmd({ events = "UIEnter", pattern = "*",
-      callback = function()
-        vim.api.nvim_command("colorscheme onedark")
-        -- require("arshamiser.feliniser")
-        -- or:
-        require("arshamiser.heirliniser")
-        _G.custom_foldtext = require("arshamiser.folding").foldtext
-        vim.opt.foldtext = "v:lua.custom_foldtext()"
-      end,
-    })
-  end,
+  -- config = function()
+  --   require("arshlib.quick").autocmd({ events = "UIEnter", pattern = "*",
+  --     callback = function()
+  --       vim.api.nvim_command("colorscheme darkplus")
+  --                 -- vim.api.nvim_command("colorscheme onedark")
+  --
+  --       -- require("arshamiser.feliniser")
+  --       -- or:
+  --       require("arshamiser.heirliniser")
+  --       _G.custom_foldtext = require("arshamiser.folding").foldtext
+  --       vim.opt.foldtext = "v:lua.custom_foldtext()"
+  --     end,
+  --   })
+  -- end,
 })
 
   --plugins specifically for competitive coding 

@@ -1078,7 +1078,7 @@ let g:startify_bookmarks = [
             \ {'s':'~/Documents/Organizations/swoop'},
             \ {'l':'~/Documents/Organizations/lezgo'},
             \ {'r':'~/Documents/Rust'},
-            \ {'a': '~/Acads/3-1'},
+            \ {'a': '~/Documents/Acads/3-1'},
             \ {'o': '~/Documents/Java'},
             \ ]
 
