@@ -98,7 +98,7 @@ cmp.setup({
 			vim_item.menu = ({
 				nvim_lsp = "[LSP]",
 				nvim_lua = "[Lua]",
-				luasnip = "[Snippet]",
+				luasnip = "[Luasnip]",
 				buffer = "[Buffer]",
 				path = "[Path]",
 				emoji = "[Emoji]",

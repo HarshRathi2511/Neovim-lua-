@@ -43,7 +43,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
 				{ key = "h", cb = tree_cb("close_node") },
 				{ key = "i", cb = tree_cb("vsplit") },
-				{ key = "s", cb = tree_cb("split") }, --horizontal split
+				{ key = "s", cb = tree_cb("vsplit") }, --horizontal split
 				{ key = "t", cb = tree_cb("tabnew") },
 				{ key = "p", cb = tree_cb("dir_up") },
 				{ key = "H", cb = tree_cb("parent_node") },
@@ -111,7 +111,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 			},
 		}, -- above: icon configs
 		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" }, -- special highlight for these files
-		symlink_destination = true, -- whether to also show the destination of a symlinked file
+		symlink_destination = true, -- wheonedark to also show the destination of a symlinked file
 	},
 	hijack_directories = {
 		enable = true,
