@@ -1073,6 +1073,7 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
             \ { 'c': '~/.config/nvim/init.lua' },
             \ { 'b': '~/.bashrc' },
+            \ { 'z': '~/.zshrc' },
             \ { 'v': '~/Documents/Backend'},
             \ {'d':'~/Documents/DSA/'},
             \ {'s':'~/Documents/Organizations/swoop'},
