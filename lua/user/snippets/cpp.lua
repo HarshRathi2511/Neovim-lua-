@@ -26,6 +26,7 @@ using vi = vector<int>;
 using ld = long double;
 using pii = pair<int, int>;
 using vvi = vector<vector<int>>;
+
 void solve(){{
  {}
 }}
