@@ -23,7 +23,7 @@ sudo make install
 Make sure to remove or move your current `nvim` directory
 
 ```sh
-git clone https://github.com/HarshRathi2511/Neovim-lua- ~/.config/nvim
+git clone https://github.com/HarshRathi2511/nvim.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed
