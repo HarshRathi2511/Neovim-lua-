@@ -1075,7 +1075,7 @@ let g:startify_bookmarks = [
             \ { 'b': '~/.bashrc' },
             \ { 'z': '~/.zshrc' },
             \ { 'v': '~/Documents/Backend'},
-            \ {'d':'~/Documents/DSA/'},
+            \ {'d':'~/Documents/DSA'},
             \ {'s':'~/Documents/Organizations/swoop'},
             \ {'l':'~/Documents/Organizations/lezgo'},
             \ {'r':'~/Documents/Rust'},

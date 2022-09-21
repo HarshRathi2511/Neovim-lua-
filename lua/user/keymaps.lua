@@ -84,8 +84,8 @@ keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 --for code actions for supported files 
-keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
-keymap("n", "<leader>cr", ":lua vim.lsp.buf.range_code_action()<CR>", opts)
+-- keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
+-- keymap("n", "<leader>cr", ":lua vim.lsp.buf.range_code_action()<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
