@@ -1081,6 +1081,7 @@ let g:startify_bookmarks = [
             \ {'r':'~/Documents/Rust'},
             \ {'a': '~/Documents/Acads/3-1'},
             \ {'o': '~/Documents/Java'},
+            \ {'w': '~/scripts'},
             \ ]
 
   " let g:startify_commands = [

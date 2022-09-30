@@ -25,7 +25,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		adaptive_size = false, -- Resize the window on each draw based on the longest line.
 		centralize_selection = false, -- when opening the sidebar, "zz" to current file location
 		width = 40, -- width of sidebar
-		height = 30, -- height of sidebar
+		-- height = 30, -- height of sidebar
 		hide_root_folder = false, -- whether to hide top line denoting root location
 		side = "right", -- sidebar location
 		preserve_window_proportions = true, -- FIXME: whether to change windows' size for windows other than sidebar

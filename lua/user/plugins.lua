@@ -88,6 +88,8 @@ return packer.startup(function(use)
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim") -- Packer
 	use("rafamadriz/neon")
+	use("rebelot/kanagawa.nvim")
+	use("Th3Whit3Wolf/space-nvim")
 
 	-- Autocomplete and suggestions
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
