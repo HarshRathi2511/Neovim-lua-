@@ -27,7 +27,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		width = 40, -- width of sidebar
 		-- height = 30, -- height of sidebar
 		hide_root_folder = false, -- whether to hide top line denoting root location
-		side = "right", -- sidebar location
+		side = "left", -- sidebar location
 		preserve_window_proportions = true, -- FIXME: whether to change windows' size for windows other than sidebar
 		number = false, -- whether to print line no.s in sidebar
 		relativenumber = false, -- same as above
@@ -42,8 +42,8 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 				-- < / > to move between siblings of curr parent dir
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
 				{ key = "h", cb = tree_cb("close_node") },
-				{ key = "i", cb = tree_cb("vsplit") },
-				{ key = "s", cb = tree_cb("vsplit") }, --horizontal split
+				{ key = "v", cb = tree_cb("vsplit") },
+				{ key = "i", cb = tree_cb("vsplit") }, --horizontal split
 				{ key = "t", cb = tree_cb("tabnew") },
 				{ key = "p", cb = tree_cb("dir_up") },
 				{ key = "H", cb = tree_cb("parent_node") },
