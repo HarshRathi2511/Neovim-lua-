@@ -1082,6 +1082,7 @@ let g:startify_bookmarks = [
             \ {'a': '~/Documents/Acads/3-1'},
             \ {'o': '~/Documents/Java'},
             \ {'w': '~/scripts'},
+            \ {'t': '~/Documents/Blockchain/near/Teen-Patti-On-The-Chain'},
             \ ]
 
   " let g:startify_commands = [
