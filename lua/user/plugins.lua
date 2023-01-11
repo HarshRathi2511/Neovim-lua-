@@ -41,9 +41,10 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	--Utility plugs
-	use({ "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }) -- Have packer manage itself
-	use({ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }) -- Useful lua functions used by lots of plugins
-	use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
+
+  use { "wbthomason/packer.nvim", commit = "6afb67460283f0e990d35d229fd38fdc04063e0a" } -- Have packer manage itself
+  use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" } -- Useful lua functions used by lots of plugins
+  use { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" } -- Autopairs, integrates with both cmp and treesitter
 	use({ "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" })
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" })
 	use({ "kyazdani42/nvim-web-devicons", commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e" })
@@ -82,8 +83,7 @@ return packer.startup(function(use)
 	-- }) --fancy notifications screen
 
 	-- Colorschemes
-	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
-	use({ "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" })
+	use({ "lunarvim/darkplus.nvim" })
 	use("navarasu/onedark.nvim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim") -- Packer
@@ -91,13 +91,26 @@ return packer.startup(function(use)
 	use("rebelot/kanagawa.nvim")
 	use("Th3Whit3Wolf/space-nvim")
 	use("lunarvim/Onedarker.nvim")
+  use 'folke/tokyonight.nvim'
+
+ -- sgs autocomplete plugins 
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
+
+
 	-- Autocomplete and suggestions
-	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
-	use({ "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }) -- buffer completions
-	use({ "hrsh7th/cmp-path" }) -- path completions
-	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" }) --for lua completion
+	-- use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
+	-- use({ "hrsh7th/cmp-buffer"}) -- buffer completions
+	-- use({ "hrsh7th/cmp-path" }) -- path completions
+	-- use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
+	-- -- use({ "hrsh7th/cmp-nvim-lsp" })
+ --  -- use { "hrsh7th/cmp-nvim-lsp", commit = "3cf38d9c957e95c397b66f91967758b31be4abe6" }
+	-- use({ "hrsh7th/cmp-nvim-lua"}) --for lua completion
 	use({
 		"saecki/crates.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
@@ -118,14 +131,23 @@ return packer.startup(function(use)
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
-	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
+	-- use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
+  use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12"} -- simple to use language server installer
+  use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" })
+
+
+
 	--flutter tools for running using debugging etc
 	use({ "akinsho/flutter-tools.nvim", requires = { "nvim-lua/plenary.nvim" } })
 	use("tamago324/nlsp-settings.nvim") --lsp support for json and yaml files
+
+
+
+
 	-- Telescope
-	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
+	use({ "nvim-telescope/telescope.nvim" })
 	-- use { "nvim-telescope/telescope-media-files.nvim" }
 
 	-- Treesitter
@@ -134,39 +156,40 @@ return packer.startup(function(use)
 	})
 
 	-- Git
-	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
+	use({ "lewis6991/gitsigns.nvim" })
 
 	-- DAP
 	use({ "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" })
 	use({ "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" })
 	use({ "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" })
 
+
 	--arhamiser plugin for a beautiful ui
-	use({
-		"arsham/arshamiser.nvim",
-		requires = {
-			"arsham/arshlib.nvim",
-			"famiu/feline.nvim",
-			"rebelot/heirline.nvim",
-			"kyazdani42/nvim-web-devicons",
-			"j-hui/fidget.nvim",
-			"nanotee/sqls.nvim",
-		},
-		-- config = function()
-		--   require("arshlib.quick").autocmd({ events = "UIEnter", pattern = "*",
-		--     callback = function()
-		--       vim.api.nvim_command("colorscheme darkplus")
-		--                 -- vim.api.nvim_command("colorscheme onedark")
-		--
-		--       -- require("arshamiser.feliniser")
-		--       -- or:
-		--       require("arshamiser.heirliniser")
-		--       _G.custom_foldtext = require("arshamiser.folding").foldtext
-		--       vim.opt.foldtext = "v:lua.custom_foldtext()"
-		--     end,
-		--   })
-		-- end,
-	})
+	-- use({
+	-- 	"arsham/arshamiser.nvim",
+	-- 	requires = {
+	-- 		"arsham/arshlib.nvim",
+	-- 		"famiu/feline.nvim",
+	-- 		"rebelot/heirline.nvim",
+	-- 		"kyazdani42/nvim-web-devicons",
+	-- 		"j-hui/fidget.nvim",
+	-- 		"nanotee/sqls.nvim",
+	-- 	},
+	-- 	-- config = function()
+	-- 	--   require("arshlib.quick").autocmd({ events = "UIEnter", pattern = "*",
+	-- 	--     callback = function()
+	-- 	--       vim.api.nvim_command("colorscheme darkplus")
+	-- 	--                 -- vim.api.nvim_command("colorscheme onedark")
+	-- 	--
+	-- 	--       -- require("arshamiser.feliniser")
+	-- 	--       -- or:
+	-- 	--       require("arshamiser.heirliniser")
+	-- 	--       _G.custom_foldtext = require("arshamiser.folding").foldtext
+	-- 	--       vim.opt.foldtext = "v:lua.custom_foldtext()"
+	-- 	--     end,
+	-- 	--   })
+	-- 	-- end,
+	-- })
 
 	--plugins specifically for competitive coding
 	use("searleser97/cpbooster.vim")

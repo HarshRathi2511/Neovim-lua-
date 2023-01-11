@@ -5,7 +5,9 @@ end
 
 configs.setup({
 	--ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-	ensure_installed = "all",
+    ensure_installed = { "typescript", "python", "bash", "dockerfile", "html", "javascript", "java", "json", "lua", "python", "vim", "c", "cpp" },
+  -- sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+	-- ensure_installed = "all",
 	sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)
 	ignore_install = { "haskell" }, -- List of parsers to ignore installing
 	autopairs = {
