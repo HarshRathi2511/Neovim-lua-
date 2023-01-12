@@ -71,8 +71,11 @@ keymap("v", ">", ">gv", opts)
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
+-- Mason Menu for Language support 
+keymap("n", "<leader>m", ":Mason<CR>", opts)
+
 --for formatting on shift f
-keymap("n", "<S-f>", ":lua vim.lsp.buf.formatting_sync()<CR>", opts)
+keymap("n", "<S-f>", ":lua vim.lsp.buf.format()<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)

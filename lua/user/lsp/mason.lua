@@ -1,22 +1,28 @@
 local servers = {
-	"sumneko_lua",
 	"cssls",
+	"emmet_ls",
 	"html",
+	"jdtls",
+	"jsonls",
+	"sumneko_lua",
 	"tsserver",
 	"pyright",
 	"bashls",
-	"jsonls",
+	"rust_analyzer",
+	"ccls",
+	"dockerls",
 	"yamlls",
+	"terraform_lsp", -- New LSP
 }
 
 local settings = {
 	ui = {
 		border = "none",
-		icons = {
-			package_installed = "◍",
-			package_pending = "◍",
-			package_uninstalled = "◍",
-		},
+     icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
 	},
 	log_level = vim.log.levels.INFO,
 	max_concurrent_installers = 4,

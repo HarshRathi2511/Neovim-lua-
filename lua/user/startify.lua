@@ -1073,6 +1073,7 @@ let g:startify_bookmarks = [
             \ {'o': '~/Documents/Java'},
             \ {'w': '~/scripts'},
             \ {'t': '~/Documents/Blockchain/near/Teen-Patti-On-The-Chain'},
+            \ {'e': '~/Documents/enarx'},
             \ ]
   " let g:startify_commands = [
   "       \ ':help reference',
