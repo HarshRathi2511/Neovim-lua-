@@ -16,6 +16,9 @@ vim.g.mapleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Reload nvim using leader sv 
+keymap("n", "<leader>sv", "<cmd>luafile %<CR>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

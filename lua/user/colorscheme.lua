@@ -1,6 +1,2 @@
-local colorscheme = "tokyonight-night"
-
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-  return
-end
+--IMP :- all the colorschemeconfig are loaded from the particular config files only for modularity 
+require("user.colorschemeconfig.onedark")
