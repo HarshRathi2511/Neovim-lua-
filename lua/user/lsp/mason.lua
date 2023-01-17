@@ -13,6 +13,8 @@ local servers = {
 	"dockerls",
 	"yamlls",
 	"terraform_lsp", -- New LSP
+  "sqlls",
+  --[[ "sqls", ]]
 }
 
 local settings = {
@@ -56,3 +58,11 @@ for _, server in pairs(servers) do
 
 	lspconfig[server].setup(opts)
 end
+
+--[[ ------------------------------- ]]
+--[[ require('lspconfig').sqls.setup{ ]]
+--[[     on_attach = function(client, bufnr) ]]
+--[[         require('sqls').on_attach(client, bufnr) ]]
+--[[     end ]]
+--[[ } ]]
+
