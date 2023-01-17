@@ -28,7 +28,7 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		width = 40, -- width of sidebar
 		-- height = 30, -- height of sidebar
 		hide_root_folder = false, -- whether to hide top line denoting root location
-		side = "left", -- sidebar location
+		side = "right", -- sidebar location
 		preserve_window_proportions = true, -- FIXME: whether to change windows' size for windows other than sidebar
 		number = false, -- whether to print line no.s in sidebar
 		relativenumber = false, -- same as above
