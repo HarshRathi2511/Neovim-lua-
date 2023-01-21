@@ -139,6 +139,11 @@ return packer.startup(function(use)
 	--[[ 		"SqlsSwitchConnection", ]]
 	--[[ 	}, ]]
 	--[[ }) ]]
+	--plugin for autosaving the work
+	use({
+		"Pocco81/auto-save.nvim",
+		commit = "979b6c82f60cfa80f4cf437d77446d0ded0addf0",
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

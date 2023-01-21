@@ -92,10 +92,14 @@ keymap(
 	opts
 ) -- list out all the buffers using telescope 
 
+
+--AUTO SAVE TOGGLE 
+keymap("n", "<leader>as", ":ASToggle<CR>", {})
+
 -- THIS SECTION IN LSP FOLDER
 --for code actions for supported files
--- keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
--- keymap("n", "<leader>cr", ":lua vim.lsp.buf.range_code_action()<CR>", opts)
+ keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
+ keymap("n", "<leader>cr", ":lua vim.lsp.buf.range_code_action()<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
