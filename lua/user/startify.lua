@@ -1074,6 +1074,7 @@ let g:startify_bookmarks = [
             \ {'w': '~/scripts'},
             \ {'t': '~/Documents/Blockchain/near/Teen-Patti-On-The-Chain'},
             \ {'e': '~/Documents/enarx'},
+            \ {'g': '~/Documents/Nrnb'}, 
             \ ]
   " let g:startify_commands = [
   "       \ ':help reference',

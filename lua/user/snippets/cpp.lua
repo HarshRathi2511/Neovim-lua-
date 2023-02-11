@@ -9,7 +9,8 @@ local insert = ls.insert_node
 -- local dynamicn = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 
-ls.add_snippets(nil, {
+ls.add_snippets(nil,
+  {
 	all = {
 		snip(
 			"cpp",
@@ -46,5 +47,6 @@ int main(){{
 				}
 			)
 		),
+
 	},
 })
