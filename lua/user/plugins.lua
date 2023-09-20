@@ -87,6 +87,7 @@ return packer.startup(function(use)
 		requires = {
 			"nvim-lua/plenary.nvim",
 		},
+    commit = "e5753b6103ce4cf887233142fa9f31b2d13b42f2",
 		config = function()
 			require("cmp-npm").setup({})
 		end,
@@ -124,21 +125,6 @@ return packer.startup(function(use)
 	--plugins specifically for competitive coding
 	use({ "searleser97/cpbooster.vim", commit = "c19126176771d9209bca0b3fb8609d45e9b6bfb9" })
 
-	--plugins for SQL workflow
-	--[[ use({ ]]
-	--[[ 	"nanotee/sqls.nvim", ]]
-	--[[ 	commit = "a0048b7018c99b68456f91b4aa42ce288f0c0774", ]]
-	--[[ 	module = { "sqls" }, ]]
-	--[[ 	cmd = { ]]
-	--[[ 		"SqlsExecuteQuery", ]]
-	--[[ 		"SqlsExecuteQueryVertical", ]]
-	--[[ 		"SqlsShowDatabases", ]]
-	--[[ 		"SqlsShowSchemas", ]]
-	--[[ 		"SqlsShowConnections", ]]
-	--[[ 		"SqlsSwitchDatabase", ]]
-	--[[ 		"SqlsSwitchConnection", ]]
-	--[[ 	}, ]]
-	--[[ }) ]]
 	--plugin for autosaving the work
 	use({
 		"Pocco81/auto-save.nvim",
